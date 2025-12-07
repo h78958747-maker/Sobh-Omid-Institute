@@ -1,0 +1,7 @@
+{
+  "name": "sobhe ommeid",
+  "description": "Transform your photos into ultra-realistic cinematic studio portraits using Gemini 2.5 Flash Image.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

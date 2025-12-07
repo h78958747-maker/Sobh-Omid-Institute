@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinematic AI Studio</title>
+    <!-- Vazirmatn Font for Persian -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              black: '#020202', // Deepest Black
+              gray: {
+                900: '#080808', 
+                850: '#0f0f0f',
+                800: '#181818',
+                700: '#2a2a2a',
+                50: '#fafafa',
+              },
+              studio: {
+                neon: '#00f0ff', // Electric Blue
+                violet: '#8a2be2', // Blue Violet
+                purple: '#aa00ff', // Deep Neon Purple
+                gold: '#ffd700', // Flashlight Gold
+              }
+            },
+            fontFamily: {
+              sans: ['Vazirmatn', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+            transitionTimingFunction: {
+              'cinematic': 'cubic-bezier(0.22, 1, 0.36, 1)', 
+              'elastic': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'slide-in-right': 'slideInRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'zoom-in': 'zoomIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'scale-up': 'scaleUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+              'float-slow': 'float 15s ease-in-out infinite',
+              'float-medium': 'float 10s ease-in-out infinite reverse',
+              'float-fast': 'float 7s ease-in-out infinite',
+              'beam-swing': 'beamSwing 12s ease-in-out infinite',
+              'beam-pulse': 'beamPulse 4s ease-in-out infinite',
+              'pulse-neon': 'pulseNeon 3s ease-in-out infinite',
+              'shimmer': 'shimmer 3s linear infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'drift': 'drift 30s linear infinite',
+              'stagger-1': 'fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards',
+              'stagger-2': 'fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards',
+              'stagger-3': 'fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards',
+              'stagger-4': 'fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              fadeInUp: { '0%': { opacity: '0', transform: 'translateY(40px) scale(0.98)' }, '100%': { opacity: '1', transform: 'translateY(0) scale(1)' } },
+              slideInRight: { '0%': { opacity: '0', transform: 'translateX(30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+              zoomIn: { '0%': { opacity: '0', transform: 'scale(0.9)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+              scaleUp: { '0%': { transform: 'scale(0.8)', opacity: '0' }, '100%': { transform: 'scale(1)', opacity: '1' } },
+              float: {
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+              },
+              beamSwing: {
+                '0%, 100%': { transform: 'rotate(-15deg) translateY(0)' },
+                '50%': { transform: 'rotate(15deg) translateY(-10px)' },
+              },
+              beamPulse: {
+                '0%, 100%': { opacity: '0.6', filter: 'blur(40px)' },
+                '50%': { opacity: '0.8', filter: 'blur(50px)' },
+              },
+              pulseNeon: {
+                '0%, 100%': { filter: 'drop-shadow(0 0 5px currentColor)' },
+                '50%': { filter: 'drop-shadow(0 0 15px currentColor)' },
+              },
+              shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+              drift: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+            },
+            backgroundImage: {
+              'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+              'gradient-holographic': 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
+              'shimmer-gradient': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+            },
+            boxShadow: {
+              'neon-blue': '0 0 20px rgba(0, 240, 255, 0.4), 0 0 60px rgba(0, 240, 255, 0.1)',
+              'neon-purple': '0 0 20px rgba(170, 0, 255, 0.4), 0 0 60px rgba(170, 0, 255, 0.1)',
+              'beam-glow': '0 0 100px 20px rgba(255, 215, 0, 0.3)',
+              'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-feature-settings: "cv02", "cv03", "cv04", "cv11"; }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+      input[type=range] { -webkit-appearance: none; background: transparent; }
+      input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 16px; width: 16px; border-radius: 50%; background: white; cursor: pointer; margin-top: -6px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
+      input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.5); }
+      input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; }
+      .perspective-1000 { perspective: 1000px; }
+      .transform-style-3d { transform-style: preserve-3d; }
+      .mask-fade-sides { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-black text-white antialiased overflow-x-hidden selection:bg-studio-neon/30 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
