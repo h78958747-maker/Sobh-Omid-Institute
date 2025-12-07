@@ -61,7 +61,6 @@ export const translations: Record<Language, Record<string, string>> = {
     viewVideo: "View Animation",
     downloadVideo: "Download Video",
     ratioAuto: "Auto",
-    ratioAutoTooltip: "Use Original Aspect Ratio",
     // New Settings
     skinTexture: "Realistic Skin Texture",
     faceDetail: "Face Detail Intensity",
@@ -100,14 +99,6 @@ export const translations: Record<Language, Record<string, string>> = {
     // Theme
     themeLight: "Light Mode",
     themeDark: "Dark Mode",
-    // Batch
-    batchTitle: "Batch Queue",
-    processBatch: "Process Batch",
-    batchPending: "Pending",
-    batchProcessing: "Processing...",
-    batchDone: "Done",
-    batchError: "Error",
-    batchDescription: "This system is equipped with an advanced image generation capability that allows for the simultaneous creation of multiple images. Each image is produced with the same level of precision, quality, detail clarity, and stylistic consistency; ensuring that outputs remain completely identical and uniform in terms of visual harmony, color, lighting, and fidelity to prompt specifications. This feature is ideal for producing related image sets, different versions of a scene, or serialized outputs with professional quality.",
   },
   fa: {
     instituteName: "موسسه صبح امید",
@@ -168,7 +159,6 @@ export const translations: Record<Language, Record<string, string>> = {
     viewVideo: "مشاهده انیمیشن",
     downloadVideo: "دانلود ویدیو",
     ratioAuto: "خودکار",
-    ratioAutoTooltip: "استفاده از نسبت ابعاد اصلی تصویر",
     // New Settings
     skinTexture: "بافت پوست واقع‌گرایانه",
     faceDetail: "شدت جزئیات چهره",
@@ -207,13 +197,5 @@ export const translations: Record<Language, Record<string, string>> = {
     // Theme
     themeLight: "حالت روشن",
     themeDark: "حالت تاریک",
-    // Batch
-    batchTitle: "صف پردازش گروهی",
-    processBatch: "پردازش همه",
-    batchPending: "در انتظار",
-    batchProcessing: "در حال پردازش...",
-    batchDone: "انجام شد",
-    batchError: "خطا",
-    batchDescription: "این سیستم مجهز به یک قابلیت پیشرفته تولید تصویر است که امکان ساخت هم‌زمان چندین تصویر را فراهم می‌کند. هر تصویر با همان سطح دقت، کیفیت، وضوح جزئیات و ثبات سبک تولید می‌شود؛ به‌طوری‌که خروجی‌ها از نظر هماهنگی بصری، رنگ، نورپردازی و وفاداری به مشخصات پرامپت، کاملاً یکسان و یکنواخت باقی می‌مانند. این ویژگی برای تولید مجموعه تصاویر مرتبط، نسخه‌های مختلف از یک صحنه، یا خروجی‌های سری‌سازی‌شده با کیفیت حرفه‌ای، ایده‌آل است.",
   }
 };

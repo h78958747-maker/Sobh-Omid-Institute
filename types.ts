@@ -65,13 +65,6 @@ export interface PromptSuggestion {
   color: string;
 }
 
-export interface BatchItem {
-  id: string;
-  original: string;
-  status: 'pending' | 'processing' | 'done' | 'error';
-  result?: string;
-}
-
 declare global {
   interface AIStudio {
     hasSelectedApiKey: () => Promise<boolean>;
